@@ -54,11 +54,12 @@
         }
         
         .logo {
-            font-size: 24px;
+            font-size: 32px;
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
         }
+        
         
         .nav-links {
             display: flex;
@@ -634,7 +635,7 @@
                 
                 <ul class="nav-links">
                     <li><a href="#">Login</a>  /
-                    <a href="#">Register</a></li>
+                    <a href="register.php">Register</a></li>
                 </ul>
             </nav>
         </div>
