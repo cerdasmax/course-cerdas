@@ -1,3 +1,15 @@
+<?php
+session_start();
+$errors = $_SESSION['errors'] ?? [];
+$old_email = $_SESSION['old_email'] ?? '';
+$old_username = $_SESSION['old_username'] ?? '';
+
+// Hapus session setelah digunakan
+unset($_SESSION['errors']);
+unset($_SESSION['old_email']);
+unset($_SESSION['old_username']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -325,17 +337,22 @@
                 <h2 class="register-title">REGISTER</h2>
 
                 <p class="form-question">How to I get started lorem ipsum dolor at?</p>
+                <?php if (!empty($errors)): ?>
+                    <?php foreach ($errors as $error): ?>
+                        <div class="error"><?php echo $error; ?></div>
+                    <?php endforeach; ?>
+                <?php endif; ?>
 
-                <form action="#" method="POST">
+                <form action="process_register.php" method="POST">
                     
                     <div class="input-group">
                         <span class="input-icon">📧</span> 
-                        <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
+                        <input type="email" id="email" name="email" class="input-field" placeholder="Email" value="<?php echo htmlspecialchars($old_email); ?>" required>
                     </div>
 
                     <div class="input-group">
                         <span class="input-icon">👤</span> 
-                        <input type="text" id="username" name="username" class="input-field" placeholder="Username" required>
+                        <input type="text" id="username" name="username" class="input-field" placeholder="Username" value="<?php echo htmlspecialchars($old_username); ?>" required>
                     </div>
 
                     <div class="input-group">
@@ -349,7 +366,7 @@
                     </div>
 
                     <button type="submit" class="btn-primary">
-                        Login </button>
+                        Register </button>
                 </form>
 
                 <div class="separator">Login with Others</div>

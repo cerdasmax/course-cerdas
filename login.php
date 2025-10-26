@@ -325,7 +325,7 @@
 
                 <p class="form-question">How to I get started lorem ipsum dolor at?</p>
 
-                <form action="#" method="POST">
+                <form action="login_process.php" method="POST">
                     
                     <div class="input-group">
                         <span class="input-icon">👤</span> 
