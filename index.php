@@ -634,7 +634,7 @@
                 </ul>
                 
                 <ul class="nav-links">
-                    <li><a href="#">Login</a>  /
+                    <li><a href="login.php">Login</a>  /
                     <a href="register.php">Register</a></li>
                 </ul>
             </nav>

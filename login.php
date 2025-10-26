@@ -34,7 +34,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: var(--light-bg); 
+            background-color: var(--light-bg); /* Latar belakang body agar ada kontras */
             overflow: hidden;
 
         }
@@ -47,8 +47,7 @@
             background-color: var(--white);
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            min-height: 730px; 
+            min-height: 730px; /* Tinggi minimum */
         }
 
         /* Kolom Kiri - Form */
@@ -322,17 +321,12 @@
             </a>
 
             <div class="form-content">
-                <h2 class="register-title">REGISTER</h2>
+                <h2 class="register-title">LOGIN</h2>
 
                 <p class="form-question">How to I get started lorem ipsum dolor at?</p>
 
                 <form action="#" method="POST">
                     
-                    <div class="input-group">
-                        <span class="input-icon">📧</span> 
-                        <input type="email" id="email" name="email" class="input-field" placeholder="Email" required>
-                    </div>
-
                     <div class="input-group">
                         <span class="input-icon">👤</span> 
                         <input type="text" id="username" name="username" class="input-field" placeholder="Username" required>
@@ -341,11 +335,6 @@
                     <div class="input-group">
                         <span class="input-icon">🔒</span> 
                         <input type="password" id="password" name="password" class="input-field" placeholder="Password" required>
-                    </div>
-
-                    <div class="input-group">
-                        <span class="input-icon">🔒</span> 
-                        <input type="password" id="confirm-password" name="confirm-password" class="input-field" placeholder="Confirm Password" required>
                     </div>
 
                     <button type="submit" class="btn-primary">
